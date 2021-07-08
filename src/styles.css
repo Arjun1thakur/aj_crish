@@ -1,1 +1,255 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Karla:wght@200;300;400;500;700&display=swap&family=Ubuntu:ital,wght@0,500;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;600&family=Ubuntu:wght@300;400;500&display=swap');
+:root{
+    --backgroundcolor: black;
+    --white: white;
+    --green: green;
+}
+*{
+    padding:0;
+    margin: 0;
+    font-family: 'Poppins',sans-serif;
+    background-color: var(--backgroundcolor);
+}
+a,h1,h2,h3,h4,h5,h6,p{
+    text-decoration: none;
+    color: var(--white);
+}
+h1{font-family: poppins,sans-serif;}
+h3{font-size: 18px;}
+
+.container{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#navbar{
+    background-color: rgba(0,0,0, 0.4);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 2px -2px rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    position: fixed;
+    width: 95%;
+    z-index: 2;
+    height: 80px;
+}
+#navbar header{
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    /* filter: blur(8px); */
+}
+nav{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+.nav_link{
+    background-color: transparent;
+}
+.nav_link li{
+    display: inline-block;
+    padding: 0px 20px;
+    background-color: transparent;
+}
+.logo{
+    background-color: transparent;
+}
+
+.logo i{
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 30px;
+    border: 3px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.nav_link li a{
+    background: transparent;
+    transition: all 0.3s ease 0s;
+    background-color: transparent;
+}
+.nav_link li a:hover,#about_link:hover,#home1:hover{
+    color: var(--green);
+}
+#about_link,#home1{
+    padding: 20px ;
+    background: transparent;
+    transition: all 0.3s ease 0s;
+}
+li,a,button{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+}
+.main_img img{
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+.about_para{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.skills h1{
+    padding-top:300px;
+    padding-bottom: 100px;
+    font-family: 'Overpass Mono',sans-serif;
+    font-size: 45px;
+}
+.skills a{
+    padding: 10px;
+    border: 1px solid white;
+    margin: 10px;
+    font-family: 'Overpass Mono',sans-serif;
+    font-size: 16px;
+
+}
+.bottam{
+    border-top: solid white;
+    margin-top: 60px;
+}
+.hire_me:hover{
+    transform:scale3d(1.1,1.1,1);
+}
+.hire_contact{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.project_contents{
+    border: 1px solid white;
+    position: relative;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px ;
+}
+.project_contents .card{
+    position: relative;
+    max-width: 300px;
+    height: 180px;
+    margin: 30px 10px;
+    padding: 20px 15px ;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease-in-out;
+    border: 1px solid white;
+}
+.project_contents .card:hover{
+    height: 320px;
+}
+.more_project{
+    margin: 25px;
+    text-align: center;
+}
+.project_contents .card .card_img{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+}
+.project_contents .card .card_img img{
+    max-width: 100%;
+    border-radius: 10px;
+    height: 200px;
+}
+.project_contents .card .card_content{
+    color: white;
+    position: relative;
+    margin-top: -100;
+    padding:10px 15px ;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition:0.3s ease-in-out;
+}
+.project_contents .card .card_content h2,.project_contents .card .card_content p{
+    color: white;
+
+}
+.project_contents .card:hover .card_content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -60px;
+}
+#home1{
+    display: none;
+    text-align: right;
+}
+.main_section{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:800px){
+    .nav_link{
+        display: none;
+    }
+    #navbar header{
+        justify-content:start;
+        
+    }
+    #notification{
+    color: white; border: 3px solid white;border-radius: 50%;padding: 10px;font-size: 25px;
+    }
+    .main_section{
+        width: 80%;
+    }
+    .hire_contact{
+        width: 100%;
+    }
+    #home1{
+        display:block;
+    }
+
+}
+@media (max-width:650px){
+    .skills a{
+        display: list-item;
+        list-style: none;
+    }
+    .skills h1{
+        padding-top: 200px;
+        padding-bottom: 40px;
+    }
+
+}
+@media (max-width:500px){
+    .main_section{
+        width: 95%;
+    }
+}
+@media (min-width:1000px){
+    .skills_section{
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (max-width:400px){
+.project_contents .card .card_img{
+    left: 10px;
+    }
+}
